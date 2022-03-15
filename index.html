@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Nhap tu can tim" id="tk">
+<button onclick="Timkiem()">Tim Kiem</button>
+<h2 id="show"></h2>
+<script>
+    let TA = ["Cat","Bird","Fish","Dog","Mouse"];
+    let TV = ["Con Mèo", "Con Chim", "Con Cá", "Con Chó", "Con Chuột"];
+    function Timkiem() {
+        let value = document.getElementById('tk').value;
+        for (let i = 0 ; i< TA.length; i++) {
+            if (value == TA[i]) {
+                document.getElementById('show').innerHTML= TV[i];
+            }
+            else {
+                document.getElementById('show').innerHTML= "Khong tim thay";
+            }
+        }
+    }
+</script>
+</body>
+</html>
